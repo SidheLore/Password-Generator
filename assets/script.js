@@ -29,6 +29,7 @@ function generatePassword(){
 
   }
  else if (){
+ }
 
   else if(){
 
@@ -45,7 +46,6 @@ for (var i = 0; i < charLength; i++){
   password += charSet[Math.floor(Math.random() * charSet.length)];
 console.log(password);
 }
-}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -59,7 +59,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-
-
- 
