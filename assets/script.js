@@ -5,10 +5,11 @@
     var charLowerercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     var charNumeric = ['0', '1', '2', '3', '4', '5', '6' ,'7', '8', '9'];
     var charSpecial = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '~', '[', ']', '{', '}', '/', '<', '>',];
-    var charString = charUppercase + charLowercase + charNumeric + charSpecial;
-    var charSet = var passwordSelect();
+    var charString = charUppercase + charLowerercase + charNumeric + charSpecial;
     var password="";
     var passwordLength;
+    //var passwordSelect 
+    //var charSet = "";
 
 //
 function generatePassword(){
@@ -18,7 +19,7 @@ function generatePassword(){
     window.alert("Password must be at least 8 characters and no more than 128 characters. Please try again.");
     return null;
   }
-  else (charLength >= 8 && charLength <= 128) {
+  else{
     return password;
   }
 
@@ -62,7 +63,7 @@ function generatePassword(){
 }
 
 // Generate random password
-for (var i = 0; i < charLength; i++){
+for (var i = 0; i < passwordLength; i++){
   password += charSet[Math.floor(Math.random() * charSet.length)];
 console.log(password);
 }
@@ -76,6 +77,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
