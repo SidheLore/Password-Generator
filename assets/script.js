@@ -5,40 +5,60 @@
     var charLowerercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     var charNumeric = ['0', '1', '2', '3', '4', '5', '6' ,'7', '8', '9'];
     var charSpecial = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '+', '~', '[', ']', '{', '}', '/', '<', '>',];
-    var charSet = "";
+    var charString = charUppercase + charLowercase + charNumeric + charSpecial;
+    var charSet = var passwordSelect();
     var password="";
     var passwordLength;
-    var passwordSelect;
 
 //
 function generatePassword(){
+  
   var passwordLength = prompt("What would you like the character length of your password to be? Please enter a value between 8 and 128.");
   if (passwordLength < 8 || passwordLength > 128) {
     window.alert("Password must be at least 8 characters and no more than 128 characters. Please try again.");
     return null;
   }
-  while (charLength >= 8 && charLength <= 128) {
+  else (charLength >= 8 && charLength <= 128) {
     return password;
   }
 
- if (!charUppercase && !charLowercase && !charNumeric && !charSpecial){
-   window.alert("Please choose at least one character type.");
-    return;
- }
- else if (){
-
+  charUppercase = confirm("Would you like to include uppercase letters");
+  if (charUppercase){
+    charUppercase;
   }
- else if (){
- }
-
-  else if(){
-
+  else{
+    charUppercase="";
   }
 
-  charUppercase = confirm("Would you like to include uppercase letters")
   charLowercase = confirm("Would you like to include lowercase letters?")
+  if (charLowercase){
+    charLowercase;
+  }
+  else{
+    charLowercase="";
+  }
+  
   charNumeric = confirm("Would you like to include numbers?")
+  if (charNumeric){
+    charNumeric;
+  }
+  else{
+    charNumeric="";
+  }
+
   charSpecial = confirm("Would you like to include special characters?")
+  if (charSpecial){
+    charSpecial;
+  }
+  else{
+    charSpecial="";
+  }
+
+  if (!charUppercase && !charLowercase && !charNumeric && !charSpecial){
+    window.alert("Please choose at least one character type.");
+     return;
+  }
+
 }
 
 // Generate random password
