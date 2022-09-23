@@ -19,16 +19,14 @@ function generatePassword(){
     window.alert("Password must be at least 8 characters and no more than 128 characters. Please try again.");
     return null;
   }
+  
   else{
-    return password;
-  }
-
   charUppercase = confirm("Would you like to include uppercase letters");
   if (charUppercase){
     charUppercase;
   }
   else{
-    charUppercase="";
+    charUppercase;
   }
 
   charLowercase = confirm("Would you like to include lowercase letters?")
@@ -59,7 +57,7 @@ function generatePassword(){
     window.alert("Please choose at least one character type.");
      return;
   }
-
+  }
 }
 
 // Generate random password
